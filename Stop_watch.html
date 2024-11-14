@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="Stop_watch.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.cdnfonts.com/css/led-digital-7" rel='stylesheet' type='text/css'>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="navbar" id="navbar">
+            <div class="left"><img src="vclock.png" height="70vh" alt="logo"></div>
+            <div class="right">
+                <ul>
+                    <li><a>Holidays</a></li>
+                    <li><a>Tools</a></li>
+                    <li><i class="icon bi bi-brightness-high-fill" id="darkmode"></i></li>
+                    <li><i class="icon bi bi-gear" id="settings"></i></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="sidebar"  >
+        <ul>
+            <li><a href="index.html"><i class="fas fa-regular fa-hourglass"></i><br><span>Timer</span></a></li>
+            <li><a href="#"><i class="fas fa-regular fa-stopwatch"></i><br><span>Stop Watch</span></a></li>
+        </ul>
+    </div>
+    <section class="container" id="container" >
+        <div class="one cont" id="one cont">
+            <div class="time">
+                <span id="hr">00</span><span id="min">:00</span><span id="sec">:00</span><span id="count" style="font-size: 70px;">.00</span>
+                </div>
+            <div class="buttons">
+                <button class="button" id="start" style="background-color: #4eae71;" onclick="start()">Start</button>
+                <button class="button" style="background-color: red;" onclick="stop()">Stop</button>
+                <a href="Stop_watch.html">
+                <button class="button" style="background-color: #f9c86d;" onclick="reset()">Reset</button>
+                </a>
+            </div>
+        </div>
+        <div class="two cont" id="two cont" >
+            <span class="heading">How to use the online stopwatch</span>
+            <hr color="gray"><br>
+            <span style="text-align: left;font-size: 16px;">
+                Set the hour, minute, and second for the online countdown timer, and start it. Alternatively, you can set the date and time to count days, hours, minutes, and seconds till (or from) the event. The timer triggered alert will appear, and the pre-selected sound will be played at the set time.
+                <br><br>
+                You can configure the accuracy for displaying fractions of a second in the stopwatch settings.
+                <br><br>
+                Click the "Start" or "Stop" buttons to start or stop the stopwatch. Click the "Lap" button to add one lap and the current stopwatch value to the lap list. To reset laps and the stopwatch value, click the "Reset" button (the button appears when the stopwatch is stopped).
+                <br><br>
+                You can configure the stopwatch appearance (text color, type, and size), and these settings will be saved; they will be used when you open your web browser next time.
+                <br><br>
+                You can add links to online stopwatches with various time values and lap lists to your browser's Favorites.
+            </span>
+        </div>
+        
+    </section>
+
+<script src="Stop_watch.js"></script>
+</body>
+</html>

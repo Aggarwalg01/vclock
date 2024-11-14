@@ -1,0 +1,278 @@
+@font-face {
+    font-family: "digit7";
+    src: url(digital-7/digital-7\ \(italic\).ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --nav-color:#3191dd;
+    --back-color:#f0f0f0;
+    --cont-color: white;
+    --text-color: #383839;
+    --digit-color:#383839;
+    --popup-back-color:#3e3e3e;
+}
+
+.navbar a{
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.dark-theme{
+    --nav-color:#383839;
+    --back-color:black;
+    --cont-color: black;
+    --text-color: white;
+    --digit-color:orange;
+    --popup-back-color:#3e3e3e;
+}
+
+.navbar{
+    background-color: var(--nav-color);
+    color: white;
+    height:10vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vh 0 0;
+}
+
+.right{
+    display: flex;
+}
+
+.right li{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+}
+
+.icon{
+    font-size: 25px;
+}
+
+.logo{
+    float: left;
+    
+}
+
+p{
+    text-align: center;
+}
+
+.sidebar{
+    height:159vh;
+    background-color: #383839;
+    color: #f0f0f0; 
+    position: fixed;
+    top:10vh;
+    width: 7vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar li{
+    display: block;
+    height: 10vh;
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar li:hover{
+    background-color:#545454;
+}
+
+.sidebar i{
+    color: white;
+    font-size: 30px;
+}
+
+.sidebar span{
+    color: white;
+    font-size: 13px;
+}
+
+body{
+    background:var(--back-color);
+}
+
+#container{
+    background:var(--back-color);
+    color: var(--text-color);
+    width: 93vw;
+    position: relative;
+    top: 10vh;
+    left: 7vw;
+    padding: 4vh;
+    justify-content: center;
+    display: grid;
+    gap: 3vh;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.cont{
+    background-color: var(--cont-color);
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.one{
+    grid-area: 1/1/2/3;
+    height: 65vh;
+    margin: 1vh 0 2vh 0; 
+}
+
+.time p{
+    font-size: 158px;
+    align-self: center;
+    color: var(--digit-color);
+    font-family: "digit7";
+}
+
+
+.buttons{
+    align-self: center;
+    margin: 2vh ;
+    position: relative;
+    top: 50px;
+}
+
+.button{
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2vh 0.5vh;
+    width: 8vw;
+    font-size: 15px;
+}
+
+#stop{
+    display: none;
+}
+
+#start{
+    display: inline-block;
+}
+
+.two,.three,.four,.five{
+    padding: 1vw;
+}
+.four,.five{
+    height: 105%;
+}
+
+hr{
+    width: 100%;
+    height: 1px;
+    align-self: center;
+}
+
+.heading{
+    font-size: 22px;
+}
+
+.three table{
+    margin: 0 25%;
+}
+
+.five table{
+    margin: 0 20%;
+}
+
+a:link,a:visited{
+    color: #3191dd;
+    background-color: transparent;
+}
+
+td a{
+    color: #3191dd;
+    cursor: pointer;
+}
+
+.popup{
+    background-color: black;
+    display: none;
+    width: 40vw;
+    position: fixed;
+    top: 15vh;
+    left: 30vw;
+    z-index: 100;
+    border-radius: 10px;
+}
+
+i{
+    cursor: pointer;
+}
+
+.popup .upper{
+    padding: 2vh;
+    border-radius: 10px 10px 0 0;
+    background-color:var(--nav-color);
+    color: var(--text-color);
+}
+.popup .upper p{
+    text-align: left;
+    font-size: 45px;
+}
+
+.popup .controls{
+    height: 50vh;
+    background-color:var(--popup-back-color);
+    color: white;
+    padding: 2vh 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.popup .controls span{
+    text-align: left;
+    font-size: 35px;
+
+}
+
+.popup .lower{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vh;
+    border-radius: 0 0 10px 10px ;
+    background-color: var(--popup-back-color);
+}
+
+.hour-box,.minute-box,.second-box{
+    display: flex;
+    padding: 0 2vh 0 0;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+input{
+    width: 50px;
+    font-size: 20px;
+}
+
+.blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
