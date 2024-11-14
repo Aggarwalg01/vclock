@@ -1,0 +1,1 @@
+VClock is a simple, user-friendly countdown timer app that lets users set timers for various tasks and events, helping with time management and reminders. It features a clean interface and customizable alarms for effective tracking of time-sensitive activities.
